@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback, useRef, FC } from 'react';
 import io from 'socket.io-client';
 
-const socket = io(process.env.NODE_ENV === "development" ? 'http://192.168.0.117:3001' : 'https://caroso-chat-api.netlify.app');
+const socket = io(process.env.NODE_ENV === "development" ? 'http://192.168.0.117:3001' : 'http://3.94.212.155:8000');
 
 type Message = {
   content: string
