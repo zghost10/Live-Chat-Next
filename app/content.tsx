@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback, useRef, FC } from 'react';
 import io from 'socket.io-client';
 
-const socket = io(process.env.NODE_ENV === "development" ? 'http://192.168.0.117:8000' : 'http://54.167.230.230:8000');
+const socket = io(process.env.NODE_ENV === "development" ? 'http://192.168.0.117:8000' : 'http://52.91.236.183:8000');
 
 type Message = {
   content: string
