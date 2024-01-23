@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/ably": "^1.0.0",
     "@types/socket.io-client": "^3.0.0",
+    "ably": "^1.2.48",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
