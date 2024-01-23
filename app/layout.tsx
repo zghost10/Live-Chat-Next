@@ -1,7 +1,12 @@
 import { Montserrat } from 'next/font/google'
 import './globals.css'
+import { Metadata } from 'next'
 
 const font = Montserrat({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: "Live - Chat"
+}
 
 export default function RootLayout({
   children,

@@ -1,21 +1,21 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import * as Ably from 'ably';
 import { AblyProvider } from 'ably/react';
-import ChatBox from './chatbox/chatbox';
-
-type Message = {
-  content: string
-  sender: string
-  time: string
-}
+import ChatBox from './chatbox';
+import Greetings from './greetings';
 
 const Chat = () => {
   const client = new Ably.Realtime.Promise({ authUrl: '/api' })
+  const [username, setUsername] = useState("")
 
   return (
     <AblyProvider client={ client }>
-      <ChatBox/>
+      {
+        username === "" ?
+        <Greetings context={{setUsername}} /> :
+        <ChatBox context={{setUsername, username}}/>
+      }
     </AblyProvider>
   )
 }
