@@ -6,7 +6,10 @@ import ChatBox from './chatbox';
 import Greetings from './greetings';
 
 const Chat = () => {
-  const client = new Ably.Realtime.Promise({ authUrl: '/api' })
+  const client = new Ably.Realtime.Promise({ 
+    authUrl: '/api',
+    queryTime: true
+  })
   const [username, setUsername] = useState("")
 
   return (
