@@ -8,7 +8,8 @@ import Greetings from './greetings';
 const Chat = () => {
   const client = new Ably.Realtime.Promise({ 
     authUrl: '/api',
-    queryTime: true
+    queryTime: true,
+    authMethod: 'POST'
   })
   const [username, setUsername] = useState("")
 
